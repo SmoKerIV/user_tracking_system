@@ -12,7 +12,7 @@ exports.defineClient = async (req, res) => {
     console.log("🔹 Received Request:", { name, projectName });
 
     let client = await prisma.client.findFirst({
-      where: { project: projectName } // تأكد من استخدام `project` هنا
+      where: { project: projectName }
     });
 
     if (!client) {
