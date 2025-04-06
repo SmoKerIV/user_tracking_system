@@ -9,8 +9,9 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/',console.log("TEST"));
-
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  });
 app.use("/api/clients", clientRoutes);
 app.use("/api/actions", actionRoutes);
 
